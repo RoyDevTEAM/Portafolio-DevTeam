@@ -1,0 +1,55 @@
+
+<app-header></app-header>
+
+<div class="about-section">
+  <div id="mission" [class.visible]="isVisible.mission" class="section">
+    <div class="card-container flex justify-center space-x-6">
+      <div class="card bg-cover bg-center p-6 rounded-lg shadow-md" style="background-image: url('https://www.startechup.com/wp-content/uploads/annie-spratt-QckxruozjRg-unsplash.jpg');">
+        <div class="card-overlay">
+          <h2 class="text-2xl font-bold mb-4">Misión</h2>
+          <p class="mv">Nuestra misión es desarrollar soluciones tecnológicas innovadoras que mejoren la vida de las personas y aumenten la eficiencia de las empresas.</p>
+        </div>
+      </div>
+      <div class="card bg-cover bg-center p-6 rounded-lg shadow-md" style="background-image: url('https://www.startechup.com/wp-content/uploads/annie-spratt-QckxruozjRg-unsplash.jpg');">
+        <div class="card-overlay">
+          <h2 class="text-2xl font-bold mb-4">Visión</h2>
+          <p class="mv">Nuestra visión es ser líderes en el campo de desarrollo de software, reconocidos por nuestra calidad, compromiso y capacidad de innovación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="history" [class.visible]="isVisible.history" class="section mt-12">
+    <div class="content-wrapper flex flex-col md:flex-row items-center">
+      <div class="text-content md:w-1/2 p-6">
+        <h2 class="tl text-3xl font-bold mb-4">Nuestra Historia y Objetivos</h2>
+        <p>El equipo se formó en 2020 con el objetivo de reunir a jóvenes talentos en el área de la tecnología. Desde entonces, hemos trabajado en diversos proyectos que han tenido un impacto significativo en nuestra comunidad.</p>
+        <p>Uno de nuestros mayores logros fue el desarrollo de un sistema de gestión para pequeñas empresas, que ha ayudado a numerosos negocios a mejorar su eficiencia y aumentar sus ganancias.</p>
+        <p>Además, hemos organizado varios talleres y cursos para compartir nuestro conocimiento y fomentar el aprendizaje continuo entre nuestros miembros y la comunidad en general.</p>
+      </div>
+      <img src="https://innatos.com.mx/wp-content/uploads/2020/03/INNATOS-Dicho-software-esta-dise%C3%B1ado-para-satisfacer-sus-necesidades-de-forma-especIfica-SUBTITULO.png" alt="Nuestra Historia" class="history-img md:w-1/2 rounded-lg shadow-md">
+    </div>
+  </div>
+
+  <div id="leaders" [class.visible]="isVisible.leaders" class="section mt-12">
+    <h2 class="tl text-3xl font-bold text-center mb-8">Nuestros Líderes</h2>
+    <div class="leaders-container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="leader flex flex-col items-center bg-white p-6 rounded-lg shadow-md">
+        <img src="https://innatos.com.mx/wp-content/uploads/2020/03/INNATOS-Dicho-software-esta-dise%C3%B1ado-para-satisfacer-sus-necesidades-de-forma-especIfica-SUBTITULO.png" alt="Jaime Zambrana" class="leader-img w-32 h-32 rounded-full mb-4">
+        <div class="leader-text text-center">
+          <h3 class="text-xl font-semibold mb-2">Jaime Zambrana</h3>
+          <p>Ingeniero Jaime Zambrana, con una vasta experiencia en desarrollo de software y liderazgo de equipos técnicos. Jaime ha trabajado en numerosos proyectos de gran envergadura y es conocido por su enfoque innovador y su capacidad para motivar a su equipo.</p>
+        </div>
+      </div>
+      <div class="leader flex flex-col items-center bg-white p-6 rounded-lg shadow-md">
+        <img src="https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png" alt="Roider" class="leader-img w-32 h-32 rounded-full mb-4">
+        <div class="leader-text text-center">
+          <h3 class="text-xl font-semibold mb-2">Roider</h3>
+          <p>Roider, co-líder del equipo, es conocido por su pasión por la tecnología y su habilidad para resolver problemas complejos. Su dedicación y conocimientos han sido fundamentales para el éxito de nuestros proyectos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

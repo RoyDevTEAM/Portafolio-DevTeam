@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<!-- Portfolio Start -->
+<div class="portfolio pt-10" id="portfolio">
+    <div class="container mx-auto">
+        <div class="section-header text-center mb-10">
+            <p class="text-teal-500">My Portfolio</p>
+            <h2 class="text-3xl font-bold">My Excellent Portfolio</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul id="portfolio-filter" class="flex justify-center space-x-4 mb-10">
+                    <li data-filter="*" class="filter-active cursor-pointer" (click)="filterProjects('*')">All</li>
+                    <li data-filter=".filter-1" class="cursor-pointer" (click)="filterProjects('filter-1')">Web Design</li>
+                    <li data-filter=".filter-2" class="cursor-pointer" (click)="filterProjects('filter-2')">Mobile Apps</li>
+                    <li data-filter=".filter-3" class="cursor-pointer" (click)="filterProjects('filter-3')">Game Dev</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-container">
+            <div *ngFor="let project of getCurrentPageProjects()" [ngClass]="project.filter" class="portfolio-item">
+                <div class="portfolio-wrap relative">
+                    <div class="portfolio-img relative overflow-hidden">
+                        <img [src]="project.image" alt="Image" class="w-full h-auto">
+                        <div class="portfolio-desc absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-300">
+                            <p class="text-white text-center">{{ project.title }}</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-text text-center p-4">
+                        <h3 class="text-lg font-bold">{{ project.title }}</h3>
+                        <a class="btn inline-block mt-2" [href]="project.image" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-teal-500"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination mt-10 flex justify-center space-x-2">
+            <button (click)="prevPage()" [disabled]="currentPage === 0" class="px-4 py-2 bg-teal-500 text-white rounded">Previous</button>
+            <button (click)="nextPage()" [disabled]="currentPage >= totalPages - 1" class="px-4 py-2 bg-teal-500 text-white rounded">Next</button>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

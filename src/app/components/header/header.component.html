@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="container flex justify-between items-center py-4 px-6">
+    <div class="logo text-2xl font-bold">
+      <a href="/" class="text-white"><i class="fas fa-code"></i> DevTeam</a>
+    </div>
+    <div class="hamburger" (click)="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="nav" [class.open]="isMenuOpen">
+      <ul class="nav-list">
+        <li><a href="/home" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="/about" class="nav-link"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+        <li><a href="/projects" class="nav-link"><i class="fas fa-project-diagram"></i> Proyectos</a></li>
+        <li><a href="/courses" class="nav-link"><i class="fas fa-book"></i> Cursos</a></li>
+        <li><a href="/articles" class="nav-link"><i class="fas fa-newspaper"></i> Artículos</a></li>
+        <li><a href="/team" class="nav-link"><i class="fas fa-users"></i> Equipo</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

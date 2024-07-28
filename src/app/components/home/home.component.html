@@ -1,0 +1,211 @@
+<app-header></app-header>
+<section class="cover-section flex items-center justify-center h-screen bg-gray-900 text-white">
+  <div class="text-container flex-1 p-8 text-left">
+    <div class="intro-text mb-4">
+      <span class="badge">👋 ¡Hola! Somos DevTeam</span>
+    </div>
+    <h1 class="text-5xl font-bold mb-4">
+      Un equipo de <span class="highlight text-green-500">investigación y desarrollo</span> de la UPDS, Facultad de Ingeniería.
+    </h1>
+    <p class="text-xl mb-8">
+      Promovemos el <span class="text-green-500">desarrollo</span> y la <span class="text-green-500">innovación</span> en nuevas tecnologías. Nos dedicamos a crear soluciones tecnológicas de calidad, trabajando con las últimas herramientas y metodologías.
+    </p>
+    <div class="flex space-x-6 mt-8">
+      <a href="https://facebook.com" target="_blank" class="text-3xl transform transition-transform hover:scale-110 hover:text-blue-500">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="text-3xl transform transition-transform hover:scale-110 hover:text-blue-400">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="text-3xl transform transition-transform hover:scale-110 hover:text-pink-500">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+  <div class="image-container flex-1 h-2/3 bg-cover bg-center" style="background-image: url('https://www.varadero.es/wp-content/uploads/2020/03/servcios-it-desarrollo-software.png');">
+  </div>
+</section>
+
+  <div class="home-content p-8">
+   
+    <section class="latest-section mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Últimas Investigaciones, Proyectos y Artículos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="card bg-white p-6 rounded-lg shadow-md">
+          <img src="https://www.tarlogic.com/wp-content/uploads/2023/09/riesgos-seguridad-IA-3.jpg" alt="Investigación IA" class="mb-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Investigación sobre IA</h3>
+          <p class="text-gray-700 mb-4">Exploramos cómo la inteligencia artificial está revolucionando diversos sectores...</p>
+          <div class="flex space-x-4">
+            <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
+            <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card bg-white p-6 rounded-lg shadow-md">
+          <img src="https://www.etkho.com/wp-content/uploads/2023/08/revolucion_IA_en_sector_salud_pic02_20230814_etkho_hospital_engineering.jpg" alt="Proyecto IA" class="mb-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Proyecto de IA en la Salud</h3>
+          <p class="text-gray-700 mb-4">Desarrollamos un sistema de diagnóstico asistido por IA para mejorar la precisión médica...</p>
+          <div class="flex space-x-4">
+            <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
+            <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card bg-white p-6 rounded-lg shadow-md">
+          <img src="https://atx.mx/wp-content/uploads/2023/07/IMAGEN-DESTACADA-IA-INDUSTRIA-AUTOMOTRIZ.png" alt="Artículo sobre IA" class="mb-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Beneficios de la IA en la Industria</h3>
+          <p class="text-gray-700 mb-4">Un análisis detallado sobre cómo la IA está mejorando la eficiencia y reduciendo costos en la industria...</p>
+          <div class="flex space-x-4">
+            <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
+            <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
+          </div>
+        </div>
+        <!-- Añadir más tarjetas según sea necesario -->
+      </div>
+    </section>
+   
+        
+    
+  </div>
+ <!-- Nueva sección: Cursos y Talleres Destacados -->
+<section class="courses-section mb-12">
+  <h2 class="text-3xl font-bold text-white mb-6 text-center">Cursos y Talleres Destacados</h2>
+  <div class="courses-container">
+    <div class="course-card" *ngFor="let course of courses">
+      <img [src]="course.imageUrl" alt="{{ course.title }}" class="course-image">
+      <div class="course-content">
+        <h3 class="text-xl font-semibold mb-2">{{ course.title }}</h3>
+        <p class="text-gray-300 mb-4">{{ course.description }}</p>
+        <a [href]="course" class="btn">Más información</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Nueva sección: Eventos y Webinars -->
+<section class="events-webinars-section mb-12">
+  <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Eventos y Webinars</h2>
+  <div class="events-container space-y-8">
+    <!-- Evento 1 -->
+    <div class="event-item flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md">
+      <img src="https://via.placeholder.com/400x200" alt="Evento 1" class="mb-4 md:mb-0 md:w-1/3 rounded-lg">
+      <div class="event-content flex-1 md:ml-6">
+        <h3 class="text-xl font-semibold mb-2">Curso de Figma</h3>
+        <p class="text-gray-700 mb-4">Aprende a diseñar interfaces de usuario profesionales con Figma. Fecha: 20 de Agosto, 2024.</p>
+        <div class="event-actions flex items-center space-x-4">
+          <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Registrarse</a>
+          <span class="text-sm text-gray-500">Plazas limitadas</span>
+        </div>
+      </div>
+    </div>
+    <!-- Evento 2 -->
+    <div class="event-item flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md">
+      <img src="https://via.placeholder.com/400x200" alt="Evento 2" class="mb-4 md:mb-0 md:w-1/3 rounded-lg">
+      <div class="event-content flex-1 md:ml-6">
+        <h3 class="text-xl font-semibold mb-2">Webinar sobre Telegram</h3>
+        <p class="text-gray-700 mb-4">Descubre cómo utilizar Telegram para potenciar tu comunicación. Fecha: 25 de Agosto, 2024.</p>
+        <div class="event-actions flex items-center space-x-4">
+          <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Registrarse</a>
+          <span class="text-sm text-gray-500">Plazas limitadas</span>
+        </div>
+      </div>
+    </div>
+    <!-- Añadir más eventos -->
+  </div>
+</section>
+<!-- Nueva sección: Servicios Ofrecidos -->
+<section class="services-section mb-12" id="services">
+  <div class="container">
+    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+      <h2 class="text-3xl font-bold text-white mb-6 text-center">Servicios Ofrecidos</h2>
+    </div>
+    <div class="services-container">
+      <!-- Servicio 1 -->
+      <div class="service-item wow fadeInUp" data-wow-delay="0.0s">
+        <div class="service-icon">
+          <i class="fa fa-cogs"></i>
+        </div>
+        <div class="service-text">
+          <h3>Desarrollo de Software a Medida</h3>
+          <p>Creamos soluciones de software personalizadas para satisfacer las necesidades específicas de nuestros clientes.</p>
+          <ul class="list-disc list-inside">
+            <li>Aplicaciones web y móviles</li>
+            <li>Sistemas de gestión empresarial</li>
+            <li>Automatización de procesos</li>
+          </ul>
+          <p class="example-text">Ejemplo: Sistema de gestión para una cadena de tiendas.</p>
+        </div>
+      </div>
+      <!-- Servicio 2 -->
+      <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
+        <div class="service-icon">
+          <i class="fa fa-lightbulb"></i>
+        </div>
+        <div class="service-text">
+          <h3>Consultoría Tecnológica</h3>
+          <p>Asesoramos a empresas en la implementación de tecnologías avanzadas para mejorar sus procesos y productos.</p>
+          <ul class="list-disc list-inside">
+            <li>Evaluación de tecnologías</li>
+            <li>Integración de sistemas</li>
+            <li>Estrategias de transformación digital</li>
+          </ul>
+          <p class="example-text">Ejemplo: Implementación de un sistema ERP en una empresa manufacturera.</p>
+        </div>
+      </div>
+      <!-- Servicio 3 -->
+      <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
+        <div class="service-icon">
+          <i class="fa fa-flask"></i>
+        </div>
+        <div class="service-text">
+          <h3>Investigación y Desarrollo (I+D)</h3>
+          <p>Nos dedicamos a la investigación y desarrollo de nuevas tecnologías para impulsar la innovación.</p>
+          <ul class="list-disc list-inside">
+            <li>Proyectos de inteligencia artificial</li>
+            <li>Desarrollo de algoritmos avanzados</li>
+            <li>Exploración de tecnologías emergentes</li>
+          </ul>
+          <p class="example-text">Ejemplo: Proyecto de IA para el análisis predictivo en salud.</p>
+        </div>
+      </div>
+      <!-- Añadir más servicios si es necesario -->
+    </div>
+  </div>
+</section>
+
+<!-- Nueva sección: Blog Técnico -->
+<section class="blog-section mb-12">
+  <h2 class="text-3xl font-bold text-white mb-6 text-center">Blog Técnico</h2>
+  <div class="blog-container">
+    <!-- Publicación 1 -->
+    <div class="blog-post">
+      <img src="https://www.orange.es/metaverso/assets/uploads/Blockchain-este-fue-el-principal-motivo-de-su-creacion_interior-2690.jpg" alt="Tendencias Tecnológicas" class="blog-image">
+      <div class="blog-content">
+        <h3 class="text-2xl font-semibold mb-4">Últimas Tendencias en Tecnología</h3>
+        <p class="text-gray-300 mb-4">Explora las tendencias más recientes en el mundo de la tecnología, desde IA hasta blockchain...</p>
+        <a href="#" class="blog-link">Leer más</a>
+      </div>
+    </div>
+    <!-- Publicación 2 -->
+    <div class="blog-post reversed">
+      <img src="https://blog.facialix.com/wp-content/uploads/2021/09/New-Project-68282.jpg" alt="Tutorial de Programación" class="blog-image">
+      <div class="blog-content">
+        <h3 class="text-2xl font-semibold mb-4">Tutorial de Programación</h3>
+        <p class="text-gray-300 mb-4">Aprende a programar con este tutorial paso a paso que te guiará desde lo básico hasta avanzado...</p>
+        <a href="#" class="blog-link">Leer más</a>
+      </div>
+    </div>
+    <!-- Publicación 3 -->
+    <div class="blog-post">
+      <img src="https://gacetamedica.com/wp-content/uploads/2021/10/GettyImages-1273886962-scaled.jpg" alt="Estudio de Caso" class="blog-image">
+      <div class="blog-content">
+        <h3 class="text-2xl font-semibold mb-4">Estudio de Caso</h3>
+        <p class="text-gray-300 mb-4">Un análisis detallado de cómo implementamos una solución de IA en una empresa de salud...</p>
+        <a href="#" class="blog-link">Leer más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <app-footer></app-footer>
