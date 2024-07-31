@@ -1,4 +1,3 @@
-// articles.component.ts
 import { Component, OnInit } from '@angular/core';
 
 interface Article {
@@ -92,13 +91,16 @@ export class ArticlesComponent implements OnInit {
   updatePagination(): void {
     this.totalPages = Math.ceil(this.filteredArticles.length / this.pageSize);
     this.pageNumbers = Array.from({ length: this.totalPages }, (_, i) => i + 1);
-    this.changePage(this.currentPage);
+    this.displayCurrentPageArticles();
   }
 
   changePage(page: number): void {
+    if (page < 1 || page > this.totalPages) return;
     this.currentPage = page;
-    this.updatePagination();
-    // Slice the articles based on the current page and page size
+    this.displayCurrentPageArticles();
+  }
+
+  displayCurrentPageArticles(): void {
     const start = (this.currentPage - 1) * this.pageSize;
     const end = start + this.pageSize;
     this.filteredArticles = this.articles.slice(start, end);
