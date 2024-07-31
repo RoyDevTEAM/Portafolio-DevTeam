@@ -123,56 +123,69 @@ p {
     font-size: 1.25rem;
   }
 }
+.latest-section {
+  background-color: #f7fafc; /* bg-gray-100 */
+  padding: 2rem;
+}
 
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #319795; /* teal-600 */
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
   .latest-section {
-    background-color: #f7fafc; /* bg-gray-100 */
-    padding: 2rem;
+    padding: 1rem;
   }
-  
+
   .card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 1rem;
   }
-  
-  .card img {
-    max-width: 100%;
-    border-radius: 0.5rem;
-    transition: transform 0.3s;
-  }
-  
-  .card:hover img {
-    transform: scale(1.05);
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
-  
+
   .btn {
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 0.5rem 1rem;
   }
-  
-  .btn:hover {
-    background-color: #319795; /* teal-600 */
-    transform: scale(1.05);
-  }
-  
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .grid-cols-2 {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .grid-cols-3 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  
+}
+
   .courses-section {
     background-color: #1a202c; /* Fondo del header */
     padding: 2rem 1rem;
