@@ -6,16 +6,16 @@
         <div class="bg-gray-800 text-white text-center py-8 rounded mb-6">
             <h1 class="text-3xl font-bold mb-2">Cursos y Talleres</h1>
             <p class="text-lg mb-4">Explora nuestros cursos y talleres de investigación académica y tecnologías.</p>
-            <div class="max-w-md mx-auto">
-                <input 
-                    type="text" 
-                    placeholder="Buscar cursos..." 
-                    class="w-full px-4 py-2 rounded border border-gray-300 text-gray-700"
-                    [(ngModel)]="searchQuery"
-                    (input)="filterCourses()"
-                >
+            <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+              <input 
+                type="text" 
+                placeholder="Buscar cursos..." 
+                class="w-full px-4 py-2 rounded border border-gray-300 text-gray-700"
+                [(ngModel)]="searchQuery"
+                (input)="filterCourses()"
+              >
             </div>
-        </div>
+          </div>
 
         <!-- Main Content -->
         <div class="flex flex-col lg:flex-row gap-6">
@@ -107,54 +107,54 @@
             </div>
         </div>
 
-        <!-- Schedule Section -->
-<div class="mt-12">
-    <h2 class="text-2xl font-semibold mb-4">Cronograma de Actividades</h2>
-    <div class="bg-white p-4 rounded shadow-lg">
-        <h3 class="text-lg font-medium mb-2">Actividades del Mes</h3>
-        <!-- Placeholder for monthly schedule -->
-        <p class="mb-4">Selecciona un mes para ver las actividades programadas.</p>
-        <!-- Example of a schedule for a specific month -->
-        <div class="overflow-x-auto">
-            <table class="min-w-full bg-white border border-gray-200 rounded shadow-md">
-                <thead>
-                    <tr class="bg-gray-100 border-b">
-                        <th class="py-2 px-4 text-left text-gray-600">Fecha</th>
-                        <th class="py-2 px-4 text-left text-gray-600">Actividad</th>
-                        <th class="py-2 px-4 text-left text-gray-600">Horario</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b">
-                        <td class="py-2 px-4">1 de Agosto</td>
-                        <td class="py-2 px-4">Introducción a la Investigación</td>
-                        <td class="py-2 px-4">4:00 PM - 6:00 PM</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="py-2 px-4">8 de Agosto</td>
-                        <td class="py-2 px-4">Taller de Tecnologías Emergentes</td>
-                        <td class="py-2 px-4">4:00 PM - 6:00 PM</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="py-2 px-4">15 de Agosto</td>
-                        <td class="py-2 px-4">Curso de Bases de Datos</td>
-                        <td class="py-2 px-4">4:00 PM - 6:00 PM</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="py-2 px-4">22 de Agosto</td>
-                        <td class="py-2 px-4">Git y GitHub para Desarrolladores</td>
-                        <td class="py-2 px-4">4:00 PM - 6:00 PM</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="py-2 px-4">29 de Agosto</td>
-                        <td class="py-2 px-4">Desarrollo de Bots y Automatización</td>
-                        <td class="py-2 px-4">4:00 PM - 6:00 PM</td>
-                    </tr>
-                </tbody>
-            </table>
+<!-- Experience Start -->
+<div class="experience" id="experience">
+    <div class="container">
+        <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p class="section-title text-xl font-bold text-gray-800 px-4 py-2 rounded-md mb-2">Cronograma de Actividades</p>
+            <h2 class="main-heading text-3xl font-semibold text-teal-500 uppercase tracking-wide">Actividades del Mes</h2>
+        </header>
+        <div class="timeline">
+            <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                <div class="timeline-text">
+                    <div class="timeline-date">1 de Agosto</div>
+                    <h2 class="activity-title">Introducción a la Investigación</h2>
+                    <p class="activity-time">4:00 PM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                <div class="timeline-text">
+                    <div class="timeline-date">8 de Agosto</div>
+                    <h2 class="activity-title">Taller de Tecnologías Emergentes</h2>
+                    <p class="activity-time">4:00 PM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                <div class="timeline-text">
+                    <div class="timeline-date">15 de Agosto</div>
+                    <h2 class="activity-title">Curso de Bases de Datos</h2>
+                    <p class="activity-time">4:00 PM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                <div class="timeline-text">
+                    <div class="timeline-date">22 de Agosto</div>
+                    <h2 class="activity-title">Git y GitHub para Desarrolladores</h2>
+                    <p class="activity-time">4:00 PM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                <div class="timeline-text">
+                    <div class="timeline-date">29 de Agosto</div>
+                    <h2 class="activity-title">Desarrollo de Bots y Automatización</h2>
+                    <p class="activity-time">4:00 PM - 6:00 PM</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
 
 
         <!-- Featured Courses Section -->
