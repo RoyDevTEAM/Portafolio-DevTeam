@@ -65,9 +65,9 @@ export class TeamComponent implements OnInit {
         'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
     },
     {
-      name: 'Alenador',
+      name: 'Alejandro',
       role: 'Estudiante de Ingeniería de Sistemas',
-      descripcion: '',  
+      descripcion: 'Soy  Maldine Alejandro Menacho soy un estudiante apasionado . Me encanta trabajar en proyectos de aplicaciones y sistemas de negocios, donde puedo poner en práctica mi creatividad y habilidades técnicas.',  
       imgSrc:
         'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
     },
