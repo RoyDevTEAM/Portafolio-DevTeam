@@ -20,47 +20,47 @@ export class TeamComponent implements OnInit {
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy fullstack con habilidades en Laravel, .NET, JS, HTML, CSS, SQL y más. Apasionado por el desarrollo web y soluciones tecnológicas.',
       imgSrc:
-        '/assets/img/elias.jpg',
+        '/assets/img/profile/elias.jpg',
     },
     {
       name: 'Yerko',
       role: 'Estudiante de Ingeniería de Sistemas',
-      descripcion: '',
+      descripcion: 'Soy Yerko Valdivia Gómez apasionado por el  desarrollador back-end y la ciencia  de datos',
       imgSrc:
-        '/assets/img/yerko.jpeg',
+        '/assets/img/profile/yerko.jpeg',
     },
     {
       name: 'Juan Luis',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Juan Luis Menacho Ramírez, apasionado por el desarrollo de software, inteligencia artificial, automatización de tareas y la gestión de servidores Linux.',
       imgSrc:
-        '/assets/img/juan.jpeg',
+        '/assets/img/profile/juan.jpeg',
     },
     {
       name: 'Noelia',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Delsy Noelia Cuellar Chung , apasionada en el desarrollo frontend con las tecnologías Html, css y JavaScript.   ',
       imgSrc:
-        '/assets/img/noelia.jpeg',
+        '/assets/img/profile/noelia.jpeg',
     },
     {
       name: 'Pablo',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Pablo Gutiérrez , apasionado por el desarrollo de aplicaciones y páginas web',
       imgSrc:
-        '/assets/img/pablo.jpeg',
+        '/assets/img/profile/pablo.jpeg',
     },
     {
       name: 'Rodrigo',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Rodrigo Ledezma Sanchez, apasionado por el desarrollo móvil, la base de datos de Firebase y los diseños en Figma.',
       imgSrc:
-        '/assets/img/rodrigo.jpeg',
+        '/assets/img/profile/rodrigo.jpeg',
     },
     {
       name: "Roy O'Neil",
       role: 'Estudiante de Ingeniería de Sistemas',
-      descripcion: '',
+      descripcion: 'Soy Roy Oniel Melgar V. Apasionado por el desarrollo de web y aplicaciones y con ganas de seguir aprendiendo nuevos lenguajes y tecnologías.',
       imgSrc:
         'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
     },
@@ -76,7 +76,14 @@ export class TeamComponent implements OnInit {
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Cesar Camacho Duran, apasionado por la seguridad informática, desarrollo de software y inteligencia artificial.',  
       imgSrc:
-        '/assets/img/cesar.jpeg',
+        '/assets/img/profile/cesar.jpeg',
+    },
+    {
+      name: 'Dorian',
+      role: 'Estudiante de Ingeniería de Sistemas',
+      descripcion: 'Soy Dorian Escobar Acosta ,apasionado por el desarrollo web, con ganas de seguir aprendiendo nuevas tecnologias',  
+      imgSrc:
+        '/assets/img/profile/cesar.jpeg',
     },
     // Agrega más miembros aquí
   ];
