@@ -6,6 +6,8 @@ import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  isOpen: boolean[] = [false, false, false, false, false];
+
   courses = [
     {
       title: 'Curso de Git y GitHub',
@@ -58,5 +60,7 @@ export class HomeComponent implements OnInit {
 
     this.renderer.addClass(textContainer, 'animated');
     this.renderer.addClass(imageContainer, 'animated');
+  }toggleAccordion(index: number): void {
+    this.isOpen[index] = !this.isOpen[index];
   }
 }

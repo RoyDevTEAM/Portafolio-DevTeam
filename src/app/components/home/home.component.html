@@ -208,5 +208,67 @@
     </div>
   </div>
 </section>
+<!-- FAQ Section -->
+<section class="py-12 bg-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-teal-300">Preguntas Frecuentes sobre Desarrollo de Software</h2>
+    <div class="space-y-4">
+      <!-- Question 1 -->
+      <div class="bg-gray-700 shadow-lg rounded-lg p-6 accordion-item" (click)="toggleAccordion(0)">
+        <h3 class="text-xl font-semibold text-teal-300 cursor-pointer flex justify-between items-center">
+          ¿Qué lenguajes de programación debo aprender para ser desarrollador de software?
+          <i [ngClass]="{'fas fa-chevron-down': !isOpen[0], 'fas fa-chevron-up': isOpen[0]}"></i>
+        </h3>
+        <p class="mt-2 text-gray-300" [class.hidden]="!isOpen[0]">
+          Para comenzar en el desarrollo de software, se recomienda aprender lenguajes como Python, JavaScript, y Java. Cada uno tiene su propio campo de aplicación y ventajas, y conocer varios lenguajes te hará más versátil.
+        </p>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="bg-gray-700 shadow-lg rounded-lg p-6 accordion-item" (click)="toggleAccordion(1)">
+        <h3 class="text-xl font-semibold text-teal-300 cursor-pointer flex justify-between items-center">
+          ¿Qué es el desarrollo ágil?
+          <i [ngClass]="{'fas fa-chevron-down': !isOpen[1], 'fas fa-chevron-up': isOpen[1]}"></i>
+        </h3>
+        <p class="mt-2 text-gray-300" [class.hidden]="!isOpen[1]">
+          El desarrollo ágil es una metodología que promueve la colaboración continua y el desarrollo iterativo e incremental. Se enfoca en la entrega rápida de software funcional y la adaptación a los cambios.
+        </p>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="bg-gray-700 shadow-lg rounded-lg p-6 accordion-item" (click)="toggleAccordion(2)">
+        <h3 class="text-xl font-semibold text-teal-300 cursor-pointer flex justify-between items-center">
+          ¿Cuál es la diferencia entre frontend y backend?
+          <i [ngClass]="{'fas fa-chevron-down': !isOpen[2], 'fas fa-chevron-up': isOpen[2]}"></i>
+        </h3>
+        <p class="mt-2 text-gray-300" [class.hidden]="!isOpen[2]">
+          El frontend se refiere a la parte del software que interactúa directamente con el usuario, como la interfaz gráfica. El backend, por otro lado, se encarga de la lógica del servidor, la base de datos y la integración de sistemas.
+        </p>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="bg-gray-700 shadow-lg rounded-lg p-6 accordion-item" (click)="toggleAccordion(3)">
+        <h3 class="text-xl font-semibold text-teal-300 cursor-pointer flex justify-between items-center">
+          ¿Qué son las APIs y por qué son importantes?
+          <i [ngClass]="{'fas fa-chevron-down': !isOpen[3], 'fas fa-chevron-up': isOpen[3]}"></i>
+        </h3>
+        <p class="mt-2 text-gray-300" [class.hidden]="!isOpen[3]">
+          Las APIs (Interfaces de Programación de Aplicaciones) permiten que diferentes sistemas de software se comuniquen entre sí. Son importantes porque facilitan la integración y la interacción entre distintas aplicaciones y servicios.
+        </p>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="bg-gray-700 shadow-lg rounded-lg p-6 accordion-item" (click)="toggleAccordion(4)">
+        <h3 class="text-xl font-semibold text-teal-300 cursor-pointer flex justify-between items-center">
+          ¿Cuáles son las mejores prácticas para escribir código limpio?
+          <i [ngClass]="{'fas fa-chevron-down': !isOpen[4], 'fas fa-chevron-up': isOpen[4]}"></i>
+        </h3>
+        <p class="mt-2 text-gray-300" [class.hidden]="!isOpen[4]">
+          Escribir código limpio implica seguir principios como la simplicidad, la legibilidad, y la consistencia. Esto incluye usar nombres de variables descriptivos, escribir funciones cortas y específicas, y comentar el código adecuadamente.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <app-footer></app-footer>
