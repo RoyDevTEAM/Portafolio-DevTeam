@@ -6,6 +6,7 @@
   background-color: #1a202c;
   color: #fff;
   overflow: hidden;
+  position: relative;
 }
 
 .text-container {
@@ -15,16 +16,31 @@
   opacity: 0;
   transform: translateX(-100%);
   animation: slide-in 1s forwards;
+  z-index: 1; /* Ensure text is above overlay */
 }
 
 .image-container {
   flex: 1;
-  height: 66.67%;
   background-size: cover;
   background-position: center;
+  height: 100%; /* Ensure the height fits the container */
+  width: 100%;  /* Ensure the width fits the container */
   opacity: 0;
   transform: translateX(100%);
   animation: slide-in 1s forwards 0.5s;
+  position: relative; /* Ensure proper alignment */
+}
+
+/* Ensure the image fits within the container */
+.cover-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 0; /* Ensure overlay is below text */
 }
 
 @keyframes slide-in {
@@ -86,13 +102,28 @@ p {
   color: #ec4899;
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
   .text-container {
     text-align: center;
   }
 
-  .image-container {
+  .hidden-mobile-text {
     display: none;
+  }
+
+  .hidden-mobile {
+    display: none;
+  }
+
+  .cover-section {
+    background-image: url('/assets/img/foto17.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cover-section::before {
+    background: rgba(0, 0, 0, 0.7); /* Increase contrast for mobile */
   }
 }
 
@@ -122,69 +153,12 @@ p {
   p {
     font-size: 1.25rem;
   }
-}
-.latest-section {
-  background-color: #f7fafc; /* bg-gray-100 */
-  padding: 2rem;
-}
 
-.card {
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 0.5rem;
-  transition: transform 0.3s;
-}
-
-.card:hover img {
-  transform: scale(1.05);
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
-.btn {
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn:hover {
-  background-color: #319795; /* teal-600 */
-  transform: scale(1.05);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .grid-cols-2 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  .image-container {
+    height: 100vh; /* Set the height to full viewport height */
   }
 }
 
-@media (max-width: 1024px) {
-  .grid-cols-3 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .latest-section {
-    padding: 1rem;
-  }
-
-  .card {
-    padding: 1rem;
-  }
-
-  .btn {
-    padding: 0.5rem 1rem;
-  }
-}
 
   .courses-section {
     background-color: #1a202c; /* Fondo del header */

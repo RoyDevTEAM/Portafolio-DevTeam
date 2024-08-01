@@ -1,4 +1,5 @@
 <app-header></app-header>
+<!-- Cover Section -->
 <section class="cover-section flex items-center justify-center h-screen bg-gray-900 text-white mt-30">
   <div class="text-container flex-1 p-8 text-left">
     <div class="intro-text mb-4">
@@ -7,7 +8,7 @@
     <h1 class="text-5xl font-bold mb-4">
       Un equipo de <span class="highlight text-green-500">investigación y desarrollo</span> de la UPDS, Facultad de Ingeniería.
     </h1>
-    <p class="text-xl mb-8">
+    <p class="text-xl mb-8 hidden-mobile-text">
       Promovemos el <span class="text-green-500">desarrollo</span> y la <span class="text-green-500">innovación</span> en nuevas tecnologías. Nos dedicamos a crear soluciones tecnológicas de calidad, trabajando con las últimas herramientas y metodologías.
     </p>
     <div class="flex space-x-6 mt-8">
@@ -22,47 +23,49 @@
       </a>
     </div>
   </div>
-  <div class="image-container flex-1 h-2/3 bg-cover bg-center" style="background-image: url('https://www.varadero.es/wp-content/uploads/2020/03/servcios-it-desarrollo-software.png');">
+  <div class="image-container hidden-mobile flex-1 h-2/3 bg-cover bg-center" style="background-image: url('/assets/img/foto17.jpeg');">
   </div>
 </section>
 
   <div class="home-content p-8">
    
-    <section class="latest-section mb-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Últimas Investigaciones</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="card bg-white p-6 rounded-lg shadow-md">
-          <img src="https://www.tarlogic.com/wp-content/uploads/2023/09/riesgos-seguridad-IA-3.jpg" alt="Investigación IA" class="mb-4 rounded-lg">
-          <h3 class="text-xl font-semibold mb-4">Investigación sobre IA</h3>
-          <p class="text-gray-700 mb-4">Exploramos cómo la inteligencia artificial está revolucionando diversos sectores...</p>
-          <div class="flex space-x-4">
-            <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
-            <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="card bg-white p-6 rounded-lg shadow-md">
-          <img src="https://www.etkho.com/wp-content/uploads/2023/08/revolucion_IA_en_sector_salud_pic02_20230814_etkho_hospital_engineering.jpg" alt="Proyecto IA" class="mb-4 rounded-lg">
-          <h3 class="text-xl font-semibold mb-4">Proyecto de IA en la Salud</h3>
-          <p class="text-gray-700 mb-4">Desarrollamos un sistema de diagnóstico asistido por IA para mejorar la precisión médica...</p>
-          <div class="flex space-x-4">
-            <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
-            <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="card bg-white p-6 rounded-lg shadow-md">
-          <img src="https://atx.mx/wp-content/uploads/2023/07/IMAGEN-DESTACADA-IA-INDUSTRIA-AUTOMOTRIZ.png" alt="Artículo sobre IA" class="mb-4 rounded-lg">
-          <h3 class="text-xl font-semibold mb-4">Beneficios de la IA en la Industria</h3>
-          <p class="text-gray-700 mb-4">Un análisis detallado sobre cómo la IA está mejorando la eficiencia y reduciendo costos en la industria...</p>
-          <div class="flex space-x-4">
-            <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
-            <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
-          </div>
-        </div>
+ <!-- Latest Section -->
+<section class="latest-section mb-12">
+  <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center sm:text-left">Últimas Investigaciones</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="card bg-white p-6 rounded-lg shadow-md">
+      <img src="https://www.tarlogic.com/wp-content/uploads/2023/09/riesgos-seguridad-IA-3.jpg" alt="Investigación IA" class="mb-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-4">Investigación sobre IA</h3>
+      <p class="text-gray-700 mb-4">Exploramos cómo la inteligencia artificial está revolucionando diversos sectores...</p>
+      <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
+        <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
       </div>
-    </section>
+    </div>
+    <!-- Card 2 -->
+    <div class="card bg-white p-6 rounded-lg shadow-md">
+      <img src="https://www.etkho.com/wp-content/uploads/2023/08/revolucion_IA_en_sector_salud_pic02_20230814_etkho_hospital_engineering.jpg" alt="Proyecto IA" class="mb-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-4">Proyecto de IA en la Salud</h3>
+      <p class="text-gray-700 mb-4">Desarrollamos un sistema de diagnóstico asistido por IA para mejorar la precisión médica...</p>
+      <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
+        <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card bg-white p-6 rounded-lg shadow-md">
+      <img src="https://atx.mx/wp-content/uploads/2023/07/IMAGEN-DESTACADA-IA-INDUSTRIA-AUTOMOTRIZ.png" alt="Artículo sobre IA" class="mb-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-4">Beneficios de la IA en la Industria</h3>
+      <p class="text-gray-700 mb-4">Un análisis detallado sobre cómo la IA está mejorando la eficiencia y reduciendo costos en la industria...</p>
+      <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
+        <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
     
    
         
