@@ -71,6 +71,13 @@ export class TeamComponent implements OnInit {
       imgSrc:
         'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
     },
+    {
+      name: 'Cesar',
+      role: 'Estudiante de Ingeniería de Sistemas',
+      descripcion: 'Soy Cesar Camacho Duran, apasionado por la seguridad informática, desarrollo de software y inteligencia artificial.',  
+      imgSrc:
+        '/assets/img/cesar.jpeg',
+    },
     // Agrega más miembros aquí
   ];
 
