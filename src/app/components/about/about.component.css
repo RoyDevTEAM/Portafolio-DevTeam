@@ -1,0 +1,74 @@
+ /* About Us Section */
+ #about .bg-gray-800 {
+  background-color: #1a202c;
+}
+
+#about h2 {
+  color: #fff;
+}
+
+#about p {
+  color: #e2e8f0;
+}
+
+#about a {
+  background-color: #38b2ac;
+  color: #fff;
+}
+
+#about a:hover {
+  background-color: #319795;
+  color: #e2e8f0;
+}
+
+/* Mission, Vision, History Section */
+#mission-vision-history {
+  background: linear-gradient(to right, #1a202c, #2d3748);
+}
+
+#mission-vision-history .bg-white {
+  background-color: #fff;
+}
+
+#mission-vision-history i {
+  color: #38b2ac;
+}
+
+#mission-vision-history .text-gray-800 {
+  color: #2d3748;
+}
+
+#mission-vision-history .text-gray-600 {
+  color: #718096;
+}
+
+#mission-vision-history h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#mission-vision-history p {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+ /* Leaders Section */
+ #leaders {
+  background: linear-gradient(to right, #1a202c, #2d3748);
+}
+
+#leaders h2 {
+  color: #fff;
+}
+
+#leaders .bg-gradient-to-r {
+  background: linear-gradient(to right, #9f7aea, #4299e1);
+}
+
+#leaders .text-white {
+  color: #fff;
+}
+
+#leaders .text-gray-200 {
+  color: #edf2f7;
+}
