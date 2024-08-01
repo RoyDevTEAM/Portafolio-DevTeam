@@ -16,46 +16,46 @@ interface TeamMember {
 export class TeamComponent implements OnInit {
   teamMembers: TeamMember[] = [
     {
-      name: 'Yerko',
-      role: 'Estudiante de Ingeniería de Sistemas',
-      descripcion: '',
-      imgSrc:
-        'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
-    },
-    {
       name: 'Elias',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy fullstack con habilidades en Laravel, .NET, JS, HTML, CSS, SQL y más. Apasionado por el desarrollo web y soluciones tecnológicas.',
       imgSrc:
-        'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
+        '/assets/img/elias.jpg',
+    },
+    {
+      name: 'Yerko',
+      role: 'Estudiante de Ingeniería de Sistemas',
+      descripcion: '',
+      imgSrc:
+        '/assets/img/yerko.jpeg',
     },
     {
       name: 'Juan Luis',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Juan Luis Menacho Ramírez, apasionado por el desarrollo de software, inteligencia artificial, automatización de tareas y la gestión de servidores Linux.',
       imgSrc:
-        'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
+        '/assets/img/juan.jpeg',
     },
     {
       name: 'Noelia',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Delsy Noelia Cuellar Chung , apasionada en el desarrollo frontend con las tecnologías Html, css y JavaScript.   ',
       imgSrc:
-        'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
+        '/assets/img/noelia.jpeg',
     },
     {
       name: 'Pablo',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Pablo Gutiérrez , apasionado por el desarrollo de aplicaciones y páginas web',
       imgSrc:
-        'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
+        '/assets/img/pablo.jpeg',
     },
     {
       name: 'Rodrigo',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Rodrigo Ledezma Sanchez, apasionado por el desarrollo móvil, la base de datos de Firebase y los diseños en Figma.',
       imgSrc:
-        'https://css2.rtve.es/css/rtve.2022.deportes/mundial-futbol-catar-TE_SM7ALFL/estrellas/i/jugadores/messi.png',
+        '/assets/img/rodrigo.jpeg',
     },
     {
       name: "Roy O'Neil",
