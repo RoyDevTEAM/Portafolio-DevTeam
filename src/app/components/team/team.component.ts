@@ -44,6 +44,20 @@ export class TeamComponent implements OnInit {
         '/assets/img/profile/noelia.jpeg',
     },
     {
+      name: 'Jorge',
+      role: 'Estudiante de Ingeniería de Sistemas',
+      descripcion: 'Soy Delsy Noelia Cuellar Chung , apasionada en el desarrollo frontend con las tecnologías Html, css y JavaScript.   ',
+      imgSrc:
+        '/assets/img/profile/noelia.jpeg',
+    },
+    {
+      name: 'Joselyn',
+      role: 'Estudiante de Ingeniería de Sistemas',
+      descripcion: 'Soy Delsy Noelia Cuellar Chung , apasionada en el desarrollo frontend con las tecnologías Html, css y JavaScript.   ',
+      imgSrc:
+        '/assets/img/profile/joselyn.jpeg',
+    },
+    {
       name: 'Pablo',
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Pablo Gutiérrez , apasionado por el desarrollo de aplicaciones y páginas web',
