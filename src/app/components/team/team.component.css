@@ -12,6 +12,12 @@
   object-fit: cover;
 }
 
+.color__text{
+  color: silver;
+  font-size: medium;
+  text-align: justify;
+}
+
 .team-cover-text {
   position: absolute;
   top: 50%;
