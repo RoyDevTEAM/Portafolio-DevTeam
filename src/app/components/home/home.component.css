@@ -86,7 +86,7 @@ p {
   color: #ec4899;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .text-container {
     text-align: center;
   }
@@ -94,21 +94,9 @@ p {
   .image-container {
     display: none;
   }
-
-  .intro-text, h1 {
-    margin-bottom: 0.5rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .hidden {
-    display: none;
-  }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .text-container {
     padding: 1rem;
   }
@@ -122,7 +110,7 @@ p {
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .text-container {
     padding: 2rem;
   }
@@ -135,7 +123,6 @@ p {
     font-size: 1.25rem;
   }
 }
-
 .latest-section {
   background-color: #f7fafc; /* bg-gray-100 */
   padding: 2rem;
