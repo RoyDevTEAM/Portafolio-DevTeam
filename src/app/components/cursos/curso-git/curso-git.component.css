@@ -75,24 +75,24 @@ section {
 .carousel-container {
     overflow: hidden;
     position: relative;
-  }
-  
-  .carousel {
+}
+
+.carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-item {
+}
+
+.carousel-item {
     min-width: 100%;
     transition: opacity 0.5s ease-in-out;
-  }
-  
-  .carousel-item img {
+}
+
+.carousel-item img {
     width: 100%;
     border-radius: 0.5rem;
-  }
-  
-  .carousel-control {
+}
+
+.carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -102,16 +102,16 @@ section {
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
-  }
-  
-  .carousel-control.left {
+}
+
+.carousel-control.left {
     left: 0.5rem;
-  }
-  
-  .carousel-control.right {
+}
+
+.carousel-control.right {
     right: 0.5rem;
-  }
-  
+}
+
 /* Course Card Styles */
 .course-card {
     border: 1px solid #e2e8f0;

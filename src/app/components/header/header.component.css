@@ -47,6 +47,7 @@
   font-size: 1rem;
   position: relative;
   transition: color 0.3s ease;
+  font-weight: bold; /* Texto más en negrita */
 }
 
 .nav-link::before {
