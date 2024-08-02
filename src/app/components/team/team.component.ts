@@ -83,7 +83,21 @@ export class TeamComponent implements OnInit {
       role: 'Estudiante de Ingeniería de Sistemas',
       descripcion: 'Soy Dorian Escobar Acosta ,apasionado por el desarrollo web, con ganas de seguir aprendiendo nuevas tecnologias',  
       imgSrc:
-        '/assets/img/profile/cesar.jpeg',
+        '/assets/img/profile/dorian.jpeg',
+    },
+    {
+      name: 'Jorge',
+      role: 'Estudiante de Ingeniería de Sistemas',
+      descripcion: 'Experto en Desarrollo Web',  
+      imgSrc:
+        '/assets/img/profile/jorge.jpeg',
+    },
+    {
+      name: 'Joselyn',
+      role: 'Estudiante de Ingeniería de Sistemas',
+      descripcion: 'Soy Joselyn Santiago, estudiante en la Universidad Domingo Savio y miembro de DevTeam. Aunque fue un reto aprender nuevas tecnologías para este proyecto, con ayuda del equipo y dedicación, continuamos avanzando y enfrentaremos nuevos retos.',  
+      imgSrc:
+        '/assets/img/profile/joselyn.jpeg',
     },
     // Agrega más miembros aquí
   ];
