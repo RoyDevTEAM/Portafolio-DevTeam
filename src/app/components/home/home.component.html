@@ -33,44 +33,18 @@
 <section class="latest-section mb-12">
   <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center sm:text-left">Últimas Investigaciones</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Card 1 -->
-    <div class="card bg-white p-6 rounded-lg shadow-md">
-      <img src="https://www.tarlogic.com/wp-content/uploads/2023/09/riesgos-seguridad-IA-3.jpg" alt="Investigación IA" class="mb-4 rounded-lg">
-      <h3 class="text-xl font-semibold mb-4">Investigación sobre IA</h3>
-      <p class="text-gray-700 mb-4">Exploramos cómo la inteligencia artificial está revolucionando diversos sectores...</p>
+    <div *ngFor="let investigacion of investigaciones" class="card bg-white p-6 rounded-lg shadow-md">
+      <img [src]="investigacion.imageUrl" [alt]="investigacion.title" class="mb-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-4">{{ investigacion.title }}</h3>
+      <p class="text-gray-700 mb-4">{{ investigacion.description }}</p>
       <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
-        <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
-        <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
-      </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="card bg-white p-6 rounded-lg shadow-md">
-      <img src="https://www.etkho.com/wp-content/uploads/2023/08/revolucion_IA_en_sector_salud_pic02_20230814_etkho_hospital_engineering.jpg" alt="Proyecto IA" class="mb-4 rounded-lg">
-      <h3 class="text-xl font-semibold mb-4">Proyecto de IA en la Salud</h3>
-      <p class="text-gray-700 mb-4">Desarrollamos un sistema de diagnóstico asistido por IA para mejorar la precisión médica...</p>
-      <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
-        <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
-        <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
-      </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="card bg-white p-6 rounded-lg shadow-md">
-      <img src="https://atx.mx/wp-content/uploads/2023/07/IMAGEN-DESTACADA-IA-INDUSTRIA-AUTOMOTRIZ.png" alt="Artículo sobre IA" class="mb-4 rounded-lg">
-      <h3 class="text-xl font-semibold mb-4">Beneficios de la IA en la Industria</h3>
-      <p class="text-gray-700 mb-4">Un análisis detallado sobre cómo la IA está mejorando la eficiencia y reduciendo costos en la industria...</p>
-      <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
-        <a href="#" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
-        <a href="#" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
+        <a [href]="investigacion.readMoreLink" class="btn bg-teal-500 text-white px-4 py-2 rounded-lg">Leer más</a>
+        <a [href]="investigacion.pdfLink" class="btn bg-gray-800 text-white px-4 py-2 rounded-lg">Descargar PDF</a>
       </div>
     </div>
   </div>
 </section>
-
-    
-   
-        
-    
-  </div>
+</div>
  <!-- Nueva sección: Cursos y Talleres Destacados -->
 <section class="courses-section mb-12">
   <h2 class="text-3xl font-bold text-white mb-6 text-center">Cursos y Talleres Destacados</h2>
@@ -122,9 +96,9 @@
 <section class="services-section mb-12" id="services">
   <div class="container">
     <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-      <h2 class="text-3xl font-bold text-white mb-6 text-center">Servicios</h2>
+      <h2 class="text-3xl font-bold text-white mb-6">Servicios</h2>
     </div>
-    <div class="services-container">
+    <div class="services-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Servicio 1 -->
       <div class="service-item wow fadeInUp" data-wow-delay="0.0s">
         <div class="service-icon">
@@ -177,6 +151,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Nueva sección: Blog Técnico -->
 <section class="blog-section mb-12">

@@ -159,6 +159,59 @@ p {
   }
 }
 
+/* General Styles */
+.latest-section {
+  margin-bottom: 3rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn.bg-teal-500 {
+  background-color: #38b2ac;
+}
+
+.btn.bg-teal-500:hover {
+  background-color: #319795;
+}
+
+.btn.bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.btn.bg-gray-800:hover {
+  background-color: #1a202c;
+}
+
 
   .courses-section {
     background-color: #1a202c; /* Fondo del header */
@@ -348,6 +401,9 @@ p {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+    justify-items: center; /* Acentúa el centrado */
+
+    
   }
   
   .service-item {
@@ -358,6 +414,7 @@ p {
     border-radius: 8px;
     box-shadow: inset 0 0 0 0 transparent;
     transition: ease-out 0.5s;
+
   }
   
   .service-item:hover {

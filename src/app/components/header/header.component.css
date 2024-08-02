@@ -39,6 +39,7 @@
 .nav-list {
   display: flex;
   gap: 1rem;
+  list-style: none;
 }
 
 .nav-link {
@@ -47,7 +48,7 @@
   font-size: 1rem;
   position: relative;
   transition: color 0.3s ease;
-  font-weight: bold; /* Texto más en negrita */
+  font-weight: bold;
 }
 
 .nav-link::before {
@@ -74,18 +75,15 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav {
-    flex-direction: column;
-    background-color: #1a202c;
     position: fixed;
     top: 80px;
     left: 0;
     right: 0;
     display: none;
+    flex-direction: column;
+    background-color: #1a202c;
     padding: 1rem;
     gap: 0.5rem;
-    overflow-y: auto;
-    max-height: calc(100vh - 80px);
-    z-index: 1000;
   }
 
   .nav.open {
@@ -94,9 +92,8 @@
 
   .nav-list {
     flex-direction: column;
-    align-items: flex-start; /* Alineado al borde izquierdo */
-    padding-left: 0;
-    margin: 0;
+    align-items: flex-start;
+    width: 100%;
   }
 
   .nav-link {
@@ -110,10 +107,10 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-right: 1rem;
+  z-index: 1100;
 }
 
-.hamburger div {
+.hamburger .line {
   width: 30px;
   height: 4px;
   background-color: #fff;
@@ -121,8 +118,15 @@
   transition: 0.4s;
 }
 
+
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
+}
+
+.header.scrolled {
+  background-color: #2d3748;
+  transition: background-color 0.3s ease;
 }

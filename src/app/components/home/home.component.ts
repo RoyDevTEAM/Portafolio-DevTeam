@@ -7,6 +7,13 @@ import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   isOpen: boolean[] = [false, false, false, false, false];
+  investigaciones: Array<{ 
+    title: string; 
+    description: string; 
+    imageUrl: string; 
+    readMoreLink: string; 
+    pdfLink: string; 
+  }> = [];
 
   courses = [
     {
@@ -52,6 +59,30 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.addAnimationClass();
+    this.investigaciones = [
+      {
+        title: 'Investigación sobre IA',
+        description: 'Exploramos cómo la inteligencia artificial está revolucionando diversos sectores...',
+        imageUrl: 'https://www.tarlogic.com/wp-content/uploads/2023/09/riesgos-seguridad-IA-3.jpg',
+        readMoreLink: '#',
+        pdfLink: '#'
+      },
+      {
+        title: 'Proyecto de IA en la Salud',
+        description: 'Sistema de diagnóstico asistido por IA para mejorar la precisión médica...',
+        imageUrl: 'https://www.etkho.com/wp-content/uploads/2023/08/revolucion_IA_en_sector_salud_pic02_20230814_etkho_hospital_engineering.jpg',
+        readMoreLink: '#',
+        pdfLink: '#'
+      },
+      {
+        title: 'Beneficios de la IA en la Industria',
+        description: 'IA está mejorando la eficiencia y reduciendo costos en la industria...',
+        imageUrl: 'https://atx.mx/wp-content/uploads/2023/07/IMAGEN-DESTACADA-IA-INDUSTRIA-AUTOMOTRIZ.png',
+        readMoreLink: '#',
+        pdfLink: '#'
+      }
+    ];
+  
 
   }
   private addAnimationClass() {

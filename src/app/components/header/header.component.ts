@@ -10,6 +10,12 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    const hamburger = document.querySelector('.hamburger') as HTMLElement;
+    if (this.isMenuOpen) {
+      hamburger.classList.add('open');
+    } else {
+      hamburger.classList.remove('open');
+    }
   }
 
   @HostListener('window:scroll', [])
