@@ -1,0 +1,26 @@
+# Bloqueo general de acceso a ciertos directorios y archivos sensibles
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /secret.html
+Disallow: /private-data.json
+
+# Permitir acceso a todos los motores de búsqueda a todas las demás áreas
+User-agent: *
+Disallow:
+
+# Bloqueo específico para ciertos robots conocidos (opcional)
+User-agent: BadBot
+Disallow: /
+
+# Bloqueo de ciertos parámetros de URL que generan contenido duplicado
+Disallow: /*?sessionid
+Disallow: /*?sort
+Disallow: /*?filter
+
+# Permitir el acceso a los archivos CSS, JS e imágenes (importante para renderizado y SEO)
+Allow: /assets/
+Allow: /static/
+
+# Sitemap location
+Sitemap: https://portafolio-dev-team.vercel.app/sitemap.xml

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página de inicio -->
+  <url>
+    <loc>https://portafolio-dev-team.vercel.app/</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Sección Acerca de -->
+  <url>
+    <loc>https://portafolio-dev-team.vercel.app/about</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sección de Artículos -->
+  <url>
+    <loc>https://portafolio-dev-team.vercel.app/articles</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sección de Cursos -->
+  <url>
+    <loc>https://portafolio-dev-team.vercel.app/courses</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sección de Proyectos -->
+  <url>
+    <loc>https://portafolio-dev-team.vercel.app/projects</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Sección del Equipo -->
+  <url>
+    <loc>https://portafolio-dev-team.vercel.app/team</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Añadir más URLs según sea necesario -->
+</urlset>
