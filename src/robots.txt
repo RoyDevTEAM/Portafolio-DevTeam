@@ -13,7 +13,7 @@ Disallow: /*?filter
 
 # Permitir específicamente el acceso a Google AdSense
 User-agent: Mediapartners-Google
-Disallow: /search
+Disallow:
 Allow: /
 
 # Permitir específicamente el acceso a rastreadores de Microsoft
