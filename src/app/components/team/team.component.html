@@ -1,27 +1,33 @@
 <app-header></app-header>
+
 <section class="team-section mt-20">
-  <div class="team-cover">
-    <img src="/assets/img/foto8.jpeg" alt="Nuestro equipo" class="team-cover-img">
-    <h2 class="team-cover-text">Nuestro equipo</h2> <!-- Cambiado a h2 -->
-  </div>
+  <div class="team-cover relative">
+    <div class="overlay"></div>
+    <img src="/assets/img/foto8.jpeg" alt="Nuestro equipo de DevTeam UPDS" class="team-cover-img">
+    <h1 class="team-cover-text absolute">Nuestro equipo DevTeam UPDS</h1>
+  </div>  
   <div class="container mx-auto px-6 py-12">
-    <h2 class="text-3xl font-semibold text-center text-gray-900 mb-8">Conoce a nuestro equipo de estudiantes de Ingeniería de Sistemas</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <h2 class="text-3xl font-semibold text-center text-gray-900 mb-8">Conoce a nuestro equipo de estudiantes DevTeam UPDS</h2>
+    <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div *ngFor="let member of paginatedMembers" class="team-member bg-gray-900 text-white p-6 rounded-lg text-center fade-in">
-        <img [src]="member.imgSrc" [alt]="member.name" class="team-member-img mx-auto mb-4 rounded-full">
+        <img [src]="member.imgSrc" [alt]="'Foto de ' + member.name" class="team-member-img mx-auto mb-4 rounded-full">
         <h3 class="team-member-name text-xl font-semibold">{{ member.name }}</h3>
         <p class="team-member-role text-teal-500">{{ member.role }}</p>
         <p class="color__text">{{ member.descripcion }}</p>
         <div class="social-icons mt-4">
-          <a href="#" class="social-icon mx-2"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon mx-2"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon mx-2"><i class="fab fa-linkedin-in"></i></a>
+          <a [href]="member.facebook" class="social-icon mx-2" [attr.aria-label]="'Facebook de ' + member.name"><i class="fab fa-facebook-f"></i></a>
+          <a [href]="member.twitter" class="social-icon mx-2" [attr.aria-label]="'Twitter de ' + member.name"><i class="fab fa-twitter"></i></a>
+          <a [href]="member.linkedin" class="social-icon mx-2" [attr.aria-label]="'LinkedIn de ' + member.name"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-    </div>
+    </article>
+
     <div class="pagination mt-8 text-center">
       <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="changePage(i + 1)" [class.active]="currentPage === i + 1" class="px-4 py-2 mx-1 border rounded">{{ i + 1 }}</button>
     </div>
   </div>
 </section>
+
+
+
 <app-footer></app-footer>

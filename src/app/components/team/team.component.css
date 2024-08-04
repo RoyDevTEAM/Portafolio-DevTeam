@@ -1,4 +1,3 @@
-/* team.component.css */
 .team-cover {
   position: relative;
   width: 100%;
@@ -10,6 +9,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.7); /* Reduce the brightness to give a bit of opacity */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Add a semi-transparent overlay */
 }
 
 .color__text {
