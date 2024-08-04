@@ -1,24 +1,6 @@
-# Permitir acceso a todos los motores de búsqueda a todas las demás áreas
+# Permitir acceso a todos los motores de búsqueda a todas las áreas
 User-agent: *
 Disallow:
-
-# Permitir el acceso a los archivos CSS, JS e imágenes (importante para renderizado y SEO)
-Allow: /assets/
-Allow: /static/
-
-# Bloqueo de ciertos parámetros de URL que generan contenido duplicado
-Disallow: /*?sessionid
-Disallow: /*?sort
-Disallow: /*?filter
-
-# Permitir específicamente el acceso a Google AdSense
-User-agent: Mediapartners-Google
-Disallow:
-Allow: /
-
-# Permitir específicamente el acceso a rastreadores de Microsoft
-User-agent: bingbot
-Allow: /
 
 # Sitemap location
 Sitemap: https://portafolio-dev-team.vercel.app/sitemap.xml
