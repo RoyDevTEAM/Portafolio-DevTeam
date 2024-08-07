@@ -80,7 +80,7 @@
                             <li *ngIf="currentPage > 1">
                                 <a 
                                     href="#" 
-                                    class="px-4 py-2 border rounded text-gray-700 bg-white hover:bg-gray-200"
+                                    class="px-4 py-2 border rounded text-gray-700 bg-white hover:bg-gray-200 transition duration-300"
                                     (click)="changePage(currentPage - 1)"
                                 >
                                     « Anterior
@@ -93,7 +93,7 @@
                                     [class.text-white]="currentPage === page"
                                     [class.text-gray-700]="currentPage !== page"
                                     [class.bg-white]="currentPage !== page"
-                                    class="px-4 py-2 border rounded hover:bg-gray-200"
+                                    class="px-4 py-2 border rounded hover:bg-gray-200 transition duration-300"
                                     (click)="changePage(page)"
                                 >
                                     {{ page }}
@@ -102,7 +102,7 @@
                             <li *ngIf="currentPage < totalPages">
                                 <a 
                                     href="#" 
-                                    class="px-4 py-2 border rounded text-gray-700 bg-white hover:bg-gray-200"
+                                    class="px-4 py-2 border rounded text-gray-700 bg-white hover:bg-gray-200 transition duration-300"
                                     (click)="changePage(currentPage + 1)"
                                 >
                                     Siguiente »
