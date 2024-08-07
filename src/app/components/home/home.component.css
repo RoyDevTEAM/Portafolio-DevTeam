@@ -373,10 +373,17 @@ p {
       margin-left: 1.5rem;
     }
   }
-  
+  .truncate-description {
+    max-height: 3.6em; /* Ajusta la altura según el número de líneas que deseas mostrar */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número de líneas que deseas mostrar */
+    -webkit-box-orient: vertical;
+  }
   .services-section {
     background-color: #1a202c; /* Fondo del header */
-    padding: 45px 0 15px 100px;
+    padding: 45px 0 15px 0;
   }
   
   .services-section .section-header p {
