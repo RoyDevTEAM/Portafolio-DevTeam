@@ -1,6 +1,5 @@
 <app-header></app-header>
 
-<!-- articles.component.html -->
 <section class="py-6 px-4 bg-gray-100 mt-20">
     <div class="container mx-auto">
         <!-- Hero Section -->
@@ -27,7 +26,13 @@
                     <h3 class="text-lg font-medium mb-2">Categorías</h3>
                     <ul>
                         <li *ngFor="let category of categories">
-                            <a href="#" class="text-teal-500 hover:underline" (click)="filterByCategory(category)">{{ category }}</a>
+                            <a 
+                                href="javascript:void(0)" 
+                                class="text-teal-500 hover:underline" 
+                                (click)="filterByCategory(category); $event.stopPropagation()"
+                            >
+                                {{ category }}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -49,9 +54,12 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Article Card -->
                     <div 
-                        *ngFor="let article of filteredArticles"
+                        *ngFor="let article of paginatedArticles"
                         class="bg-white p-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
+                        <div class="mb-4">
+                            <p class="text-gray-500 text-sm">{{ article.date | date: 'dd-MM-yyyy' }}</p>
+                        </div>
                         <img 
                             [src]="article.image" 
                             alt="{{ article.title }}" 
@@ -60,7 +68,7 @@
                         <h3 class="text-lg font-semibold mb-2">
                             <a [href]="article.link" class="text-teal-500 hover:underline">{{ article.title }}</a>
                         </h3>
-                        <p class="text-gray-700 mb-4">{{ article.summary }}</p>
+                        <p class="text-gray-700 mb-2">{{ article.summary }}</p>
                         <a [href]="article.link" class="text-teal-500 hover:underline">Leer más</a>
                     </div>
                 </div>
@@ -110,20 +118,22 @@
         <div class="mt-12">
             <h2 class="text-2xl font-semibold mb-4">Artículos Destacados</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Featured Article Card -->
                 <div 
                     *ngFor="let featuredArticle of featuredArticles"
                     class="bg-white p-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                    <img 
-                        [src]="featuredArticle.image" 
-                        alt="{{ featuredArticle.title }}" 
+                    <div class="mb-4">
+                        <p class="text-gray-500 text-sm">{{ featuredArticle.date | date: 'dd-MM-yyyy' }}</p>
+                    </div>
+                    <img
+                        [src]="featuredArticle.image"
+                        alt="{{ featuredArticle.title }}"
                         class="w-full h-40 object-cover rounded mb-4"
                     >
                     <h3 class="text-lg font-semibold mb-2">
                         <a [href]="featuredArticle.link" class="text-teal-500 hover:underline">{{ featuredArticle.title }}</a>
                     </h3>
-                    <p class="text-gray-700 mb-4">{{ featuredArticle.summary }}</p>
+                    <p class="text-gray-700 mb-2">{{ featuredArticle.summary }}</p>
                     <a [href]="featuredArticle.link" class="text-teal-500 hover:underline">Leer más</a>
                 </div>
             </div>

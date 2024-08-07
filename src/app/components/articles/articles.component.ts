@@ -1,14 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Article {
-  title: string;
-  summary: string;
-  image: string;
-  link: string;
-  category: string;
-  date: Date;
-  popularity: number;
-}
+import { Article } from '../../models/article.model';
 
 @Component({
   selector: 'app-articles',
@@ -49,8 +40,9 @@ export class ArticlesComponent implements OnInit {
 
   filteredArticles: Article[] = [];
   featuredArticles: Article[] = [];
-  categories: string[] = ['Aplicaciones Móviles', 'Desarrollo Web', 'Inteligencia Artificial'];
+  categories: string[] = ['Todos', 'Aplicaciones Móviles', 'Desarrollo Web', 'Inteligencia Artificial'];
   searchQuery: string = '';
+  selectedCategory: string = 'Todos';
   sortOrder: string = 'date';
   currentPage: number = 1;
   pageSize: number = 6;
@@ -58,23 +50,25 @@ export class ArticlesComponent implements OnInit {
   pageNumbers: number[] = [];
 
   ngOnInit(): void {
-    this.filteredArticles = this.articles;
-    this.featuredArticles = this.articles.slice(0, 3); // Example: first 3 as featured
-    this.updatePagination();
+    this.featuredArticles = this.articles.slice(0, 3); // Ejemplo: los primeros 3 como destacados
+    this.updateFilteredArticles(); // Inicializa la lista de artículos filtrados
   }
 
   filterArticles(): void {
-    const query = this.searchQuery.toLowerCase();
-    this.filteredArticles = this.articles.filter(article =>
-      article.title.toLowerCase().includes(query) ||
-      article.summary.toLowerCase().includes(query)
-    );
-    this.updatePagination();
+    this.updateFilteredArticles();
+    this.currentPage = 1; // Resetea la página actual al buscar
   }
 
   filterByCategory(category: string): void {
+    this.selectedCategory = category;
+    this.filterArticles(); // Filtra también por consulta de búsqueda
+  }
+
+  updateFilteredArticles(): void {
+    const query = this.searchQuery.toLowerCase();
     this.filteredArticles = this.articles.filter(article =>
-      article.category === category
+      (article.title.toLowerCase().includes(query) || article.summary.toLowerCase().includes(query)) &&
+      (this.selectedCategory === 'Todos' || article.category === this.selectedCategory)
     );
     this.updatePagination();
   }
@@ -90,19 +84,16 @@ export class ArticlesComponent implements OnInit {
 
   updatePagination(): void {
     this.totalPages = Math.ceil(this.filteredArticles.length / this.pageSize);
-    this.pageNumbers = Array.from({ length: this.totalPages }, (_, i) => i + 1);
-    this.displayCurrentPageArticles();
+    this.changePage(1); // Cambia a la primera página para actualizar los artículos mostrados
   }
 
   changePage(page: number): void {
     if (page < 1 || page > this.totalPages) return;
     this.currentPage = page;
-    this.displayCurrentPageArticles();
   }
 
-  displayCurrentPageArticles(): void {
+  get paginatedArticles(): Article[] {
     const start = (this.currentPage - 1) * this.pageSize;
-    const end = start + this.pageSize;
-    this.filteredArticles = this.articles.slice(start, end);
+    return this.filteredArticles.slice(start, start + this.pageSize);
   }
 }

@@ -1,7 +1,7 @@
 <app-header></app-header>
 <!-- Cover Section -->
-<section class="cover-section flex items-center justify-center h-screen bg-gray-900 text-white mt-30">
-  <div class="text-container flex-1 p-8 text-left">
+<section class="cover-section flex items-center justify-center h-screen bg-gray-900 text-white mt-30 relative">
+  <div class="text-container flex-1 p-8 text-left z-10">
     <div class="intro-text mb-4">
       <span class="badge">👋 ¡Hola! Somos DevTeam</span>
     </div>
@@ -23,9 +23,11 @@
       </a>
     </div>
   </div>
-  <div class="image-container hidden-mobile flex-1 h-2/3 bg-cover bg-center" style="background-image: url('/assets/img/foto16.jpeg');">
-  </div>
+  <div class="image-container hidden-mobile flex-1 h-full bg-cover bg-center" style="background-image: url('/assets/img/foto17.jpeg');"></div>
+  <div class="overlay absolute inset-0 bg-black opacity-30 z-0"></div>
 </section>
+
+
 
   <div class="home-content p-8">
    
@@ -45,76 +47,74 @@
   </div>
 </section>
 </div>
- <!-- Nueva sección: Cursos y Talleres Destacados -->
+<!-- Nueva sección: Cursos y Talleres Destacados -->
 <section class="courses-section mb-12">
   <h2 class="text-3xl font-bold text-white mb-6 text-center">Cursos y Talleres Destacados</h2>
-  <div class="courses-container">
-    <div class="course-card" *ngFor="let course of courses">
-      <img [src]="course.imageUrl" alt="{{ course.title }}" class="course-image">
-      <div class="course-content">
+  <div class="courses-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden" *ngFor="let course of courses">
+      <img [src]="course.image" alt="{{ course.title }}" class="course-image w-full h-48 object-cover">
+      <div class="course-content p-4">
         <h3 class="text-xl font-semibold mb-2">{{ course.title }}</h3>
-        <p class="text-gray-300 mb-4">{{ course.description }}</p>
-        <a [href]="course" class="btn">Más información</a>
+        <p class="text-gray-700 mb-4">{{ course.sections[0].content }}</p>
+        <a [routerLink]="['/courses', course.id]" class="btn bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Más información</a>
       </div>
     </div>
   </div>
 </section>
 
+
 <!-- Nueva sección: Eventos y Webinars -->
 <section class="events-webinars-section mb-12">
-  <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Cursos y Talleres</h2>
+  <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Proximos Cursos y Talleres</h2>
   <div class="events-container">
+       <!-- Evento 2 -->
+<div class="event-item flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+  <img src="https://umnico-cdn.com/production/landing/en-article26.png" alt="Curso de Bots y Automatización de Telegram" class="mb-4 md:mb-0 md:w-1/3 rounded-lg">
+  <div class="event-content flex-1 md:ml-6">
+    <h3 class="text-2xl font-semibold mb-2 text-teal-600">Curso de Bots y Automatización de Telegram</h3>
+    <p class="text-gray-700 mb-4">Impartido por Juan Luis, miembro de DevTeam UPDS. Aprende a crear y automatizar bots en Telegram para mejorar la comunicación y eficiencia de tu equipo. Fecha: 12 de Agosto, 2024.</p>
+    <div class="event-actions flex items-center space-x-4">
+      <a href="https://forms.gle/8eHfMsixcwfHgkad6" class="btn bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg transition-colors duration-300">Registrarse</a>
+      <span class="text-sm text-gray-500">Plazas limitadas</span>
+    </div>
+  </div>
+</div>
    <!-- Evento 1 -->
 <div class="event-item flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
   <img src="https://designimador.com.br/wp-content/uploads/2022/09/curso-de-figma.png" alt="Curso de Figma" class="mb-4 md:mb-0 md:w-1/3 rounded-lg">
   <div class="event-content flex-1 md:ml-6">
     <h3 class="text-2xl font-semibold mb-2 text-teal-600">Curso de Figma</h3>
-    <p class="text-gray-700 mb-4">Impartido por Rodrigo Ledezma, miembro de DevTeam UPDS. Aprende a diseñar interfaces de usuario profesionales con Figma, una herramienta esencial para diseñadores de UI/UX. Fecha: 20 de Agosto, 2024.</p>
+    <p class="text-gray-700 mb-4">Impartido por Rodrigo Ledezma, miembro de DevTeam UPDS. Aprende a diseñar interfaces de usuario profesionales con Figma, una herramienta esencial para diseñadores de UI/UX. Fecha: 26 de Agosto, 2024.</p>
     <div class="event-actions flex items-center space-x-4">
       <a href="#" class="btn bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg transition-colors duration-300">Registrarse</a>
       <span class="text-sm text-gray-500">Plazas limitadas</span>
     </div>
   </div>
 </div>
-
-    <!-- Evento 2 -->
-<div class="event-item flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-  <img src="https://umnico-cdn.com/production/landing/en-article26.png" alt="Curso de Bots y Automatización de Telegram" class="mb-4 md:mb-0 md:w-1/3 rounded-lg">
-  <div class="event-content flex-1 md:ml-6">
-    <h3 class="text-2xl font-semibold mb-2 text-teal-600">Curso de Bots y Automatización de Telegram</h3>
-    <p class="text-gray-700 mb-4">Impartido por Juan Luis, miembro de DevTeam UPDS. Aprende a crear y automatizar bots en Telegram para mejorar la comunicación y eficiencia de tu equipo. Fecha: 25 de Agosto, 2024.</p>
-    <div class="event-actions flex items-center space-x-4">
-      <a href="#" class="btn bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg transition-colors duration-300">Registrarse</a>
-      <span class="text-sm text-gray-500">Plazas limitadas</span>
-    </div>
-  </div>
-</div>
-
-    <!-- Añadir más eventos -->
+ <!-- Añadir más eventos -->
   </div>
 </section>
-
 <!-- Nueva sección: Servicios Ofrecidos -->
 <section class="services-section mb-12" id="services">
   <div class="container">
     <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-      <h2 class="text-3xl font-bold text-white mb-6">Servicios</h2>
+      <h2 class="text-3xl font-bold text-white mb-6">Que realiza DevTeam UPDS</h2>
     </div>
-    <div class="services-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="services-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Servicio 1 -->
       <div class="service-item wow fadeInUp" data-wow-delay="0.0s">
         <div class="service-icon">
           <i class="fa fa-cogs"></i>
         </div>
         <div class="service-text">
-          <h3>Desarrollo de Software a Medida</h3>
-          <p>Creamos soluciones de software personalizadas para satisfacer las necesidades específicas de nuestros clientes.</p>
+          <h3>Desarrollo de Software</h3>
+          <p>Creación de soluciones de software para satisfacer las necesidades específicas de diversos proyectos.</p>
           <ul class="list-disc list-inside">
             <li>Aplicaciones web y móviles</li>
-            <li>Sistemas de gestión empresarial</li>
+            <li>Sistemas de gestión</li>
             <li>Automatización de procesos</li>
           </ul>
-          <p class="example-text">Ejemplo: Sistema de gestión para una cadena de tiendas.</p>
+          <p class="example-text">Ejemplo: Sistema de gestión académica para instituciones educativas.</p>
         </div>
       </div>
       <!-- Servicio 2 -->
@@ -123,14 +123,14 @@
           <i class="fa fa-lightbulb"></i>
         </div>
         <div class="service-text">
-          <h3>Consultoría Tecnológica</h3>
-          <p>Asesoramos a empresas en la implementación de tecnologías avanzadas para mejorar sus procesos y productos.</p>
+          <h3>Cursos y Talleres</h3>
+          <p>Ofrecemos cursos y talleres prácticos para fomentar el aprendizaje en tecnología.</p>
           <ul class="list-disc list-inside">
-            <li>Evaluación de tecnologías</li>
-            <li>Integración de sistemas</li>
-            <li>Estrategias de transformación digital</li>
+            <li>Desarrollo web</li>
+            <li>Inteligencia artificial</li>
+            <li>Metodologías ágiles</li>
           </ul>
-          <p class="example-text">Ejemplo: Implementación de un sistema ERP en una empresa manufacturera.</p>
+          <p class="example-text">Ejemplo: Taller de desarrollo de aplicaciones móviles.</p>
         </div>
       </div>
       <!-- Servicio 3 -->
@@ -139,17 +139,32 @@
           <i class="fa fa-flask"></i>
         </div>
         <div class="service-text">
-          <h3>Investigación y Desarrollo (I+D)</h3>
-          <p>Nos dedicamos a la investigación y desarrollo de nuevas tecnologías para impulsar la innovación.</p>
+          <h3>Investigación Científica</h3>
+          <p>Realizamos proyectos de investigación para generar nuevos conocimientos en tecnología.</p>
           <ul class="list-disc list-inside">
-            <li>Proyectos de inteligencia artificial</li>
-            <li>Desarrollo de algoritmos avanzados</li>
+            <li>Proyectos de IA</li>
+            <li>Desarrollo de algoritmos</li>
             <li>Exploración de tecnologías emergentes</li>
           </ul>
-          <p class="example-text">Ejemplo: Proyecto de IA para el análisis predictivo en salud.</p>
+          <p class="example-text">Ejemplo: Investigación en el uso de IA para análisis predictivo en salud.</p>
         </div>
       </div>
-      <!-- Añadir más servicios si es necesario -->
+      <!-- Servicio 4 -->
+      <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
+        <div class="service-icon">
+          <i class="fa fa-users"></i>
+        </div>
+        <div class="service-text">
+          <h3>Desarrollo de Proyectos Tecnológicos</h3>
+          <p>Implementamos proyectos que fortalezcan las habilidades de los estudiantes y beneficien a la comunidad.</p>
+          <ul class="list-disc list-inside">
+            <li>Proyectos colaborativos</li>
+            <li>Aplicación de conocimientos en proyectos reales</li>
+            <li>Innovación y emprendimiento</li>
+          </ul>
+          <p class="example-text">Ejemplo: Proyecto de desarrollo de una plataforma de gestión para pequeñas empresas.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -159,48 +174,18 @@
 <section class="blog-section mb-12">
   <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Blog Técnico</h2>
   <div class="blog-container">
-    <!-- Publicación 1 -->
-    <div class="blog-post">
-      <img src="https://www.orange.es/metaverso/assets/uploads/Blockchain-este-fue-el-principal-motivo-de-su-creacion_interior-2690.jpg" alt="Tendencias Tecnológicas" class="blog-image">
+    <div *ngFor="let noticia of noticias" class="blog-post">
+      <img [src]="noticia.image" alt="{{ noticia.title }}" class="blog-image">
       <div class="blog-content">
-        <span class="blog-date">Fri jun 19 2020 | Category</span>
-        <h3 class="blog-title">Últimas Tendencias en Tecnología</h3>
-        <p class="blog-excerpt">Explora las tendencias más recientes en el mundo de la tecnología, desde IA hasta blockchain...</p>
-        <a href="#" class="blog-link">Leer más</a>
-      </div>
-    </div>
-    <!-- Publicación 2 -->
-    <div class="blog-post">
-      <img src="https://blog.facialix.com/wp-content/uploads/2021/09/New-Project-68282.jpg" alt="Tutorial de Programación" class="blog-image">
-      <div class="blog-content">
-        <span class="blog-date">Fri jun 19 2020 | Category</span>
-        <h3 class="blog-title">Tutorial de Programación</h3>
-        <p class="blog-excerpt">Aprende a programar con este tutorial paso a paso que te guiará desde lo básico hasta avanzado...</p>
-        <a href="#" class="blog-link">Leer más</a>
-      </div>
-    </div>
-    <!-- Publicación 3 -->
-    <div class="blog-post">
-      <img src="https://gacetamedica.com/wp-content/uploads/2021/10/GettyImages-1273886962-scaled.jpg" alt="Estudio de Caso" class="blog-image">
-      <div class="blog-content">
-        <span class="blog-date">Fri jun 19 2020 | Category</span>
-        <h3 class="blog-title">Estudio de Caso</h3>
-        <p class="blog-excerpt">Un análisis detallado de cómo implementamos una solución de IA en una empresa de salud...</p>
-        <a href="#" class="blog-link">Leer más</a>
-      </div>
-    </div>
-    <!-- Publicación 4 -->
-    <div class="blog-post">
-      <img src="https://www.orange.es/metaverso/assets/uploads/Blockchain-este-fue-el-principal-motivo-de-su-creacion_interior-2690.jpg" alt="Otra Publicación" class="blog-image">
-      <div class="blog-content">
-        <span class="blog-date">Fri jun 19 2020 | Category</span>
-        <h3 class="blog-title">Título de la publicación 4</h3>
-        <p class="blog-excerpt">Sample small text: Lorem ipsum dolor sit amet...</p>
-        <a href="#" class="blog-link">Leer más</a>
+        <span class="blog-date">{{ noticia.date }} | {{ noticia.author }}</span>
+        <h3 class="blog-title">{{ noticia.title }}</h3>
+        <p class="blog-excerpt">{{ noticia.sections[0].content | slice:0:100 }}...</p>
+        <a [routerLink]="['/noticias', noticia.id]" class="blog-link">Leer más</a>
       </div>
     </div>
   </div>
 </section>
+
 <!-- FAQ Section -->
 <section class="py-12 bg-gray-800">
   <div class="container mx-auto px-4">

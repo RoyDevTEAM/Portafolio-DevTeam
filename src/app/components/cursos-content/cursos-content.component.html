@@ -1,0 +1,41 @@
+<app-header></app-header>
+<!-- Main Content -->
+<div class="container mx-auto my-8 p-4 bg-white rounded-lg shadow-lg mt-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+    <!-- Article -->
+    <article *ngIf="curso; else loading" class="md:col-span-2">
+      <h2 class="text-3xl font-bold mb-4">{{ curso.title }}</h2>
+      <img [src]="curso.image" alt="{{ curso.title }}" class="w-full mb-4 rounded-lg">
+
+      <!-- Sections -->
+      <section *ngFor="let section of curso?.sections">
+        <p class="text-gray-700 mb-4">{{ section.content }}</p>
+      </section>
+    </article>
+
+    <!-- Aside -->
+    <aside *ngIf="curso; else loading" class="bg-gray-100 p-4 rounded-lg shadow-md">
+      <h3 class="text-xl font-bold mb-4">Cursos Relacionados</h3>
+      <div class="space-y-4">
+
+        <!-- Related Courses -->
+        <div *ngFor="let relatedCourse of curso?.relatedCourses" class="bg-white p-4 rounded-lg shadow-md flex items-center hover:bg-gray-200 transition duration-200 ease-in-out">
+          <img [src]="relatedCourse.image" alt="{{ relatedCourse.title }}" class="w-24 h-24 mr-4 rounded-lg object-cover">
+          <div>
+            <a [routerLink]="['/courses', relatedCourse.id]" class="text-blue-700 hover:text-blue-900 font-bold">{{ relatedCourse.title }}</a>
+            <p class="text-gray-600 text-sm">{{ relatedCourse.description }}</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="text-center py-8">
+    <p>Cargando...</p>
+  </div>
+</ng-template>
+
+<app-footer></app-footer>

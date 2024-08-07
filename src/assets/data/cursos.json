@@ -1,0 +1,136 @@
+[
+  {
+    "id": "1",
+    "title": "Curso Intensivo de Git y GitHub",
+    "image": "/assets/img/foto17.jpeg",
+    "sections": [
+      {
+        "title": "Introducción",
+        "content": "El curso de Git y GitHub, impartido por el Ingeniero Jaime Zambrana, se llevó a cabo del 1 al 5 de Julio de 2024. Con una participación activa y un gran interés, los asistentes pudieron adquirir habilidades prácticas y teóricas en el manejo de Git y GitHub."
+      },
+      {
+        "title": "Detalles del Curso",
+        "content": "Durante el curso, los participantes aprendieron a gestionar repositorios, colaborar en proyectos y resolver conflictos de fusión. Cada sesión incluyó ejemplos prácticos y ejercicios interactivos que ayudaron a los asistentes a aplicar lo aprendido en tiempo real."
+      },
+      {
+        "title": "Cierre y Agradecimientos",
+        "content": "El curso fue organizado por el DevTeam UPDS, con Roider Millares liderando toda la logística. El curso tuvo una duración de 3 días y contó con una participación del 100% durante todo el evento. El Decano de la Facultad de Ingeniería, el Ingeniero Wilmer Campos, estuvo presente en la apertura y ofreció palabras de motivación, animando a los estudiantes a seguir adelante y crear nuevo conocimiento. Agradecemos a todos los que asistieron y contribuyeron a hacer de este curso un evento exitoso. Esperamos verlos en futuros talleres y cursos."
+      }
+    ],
+    "relatedCourses": [
+      {
+        "id": "2",
+        "title": "Curso Avanzado de Git y GitHub",
+        "description": "Profundiza en técnicas avanzadas para la gestión de proyectos colaborativos.",
+        "image": "https://img-c.udemycdn.com/course/750x422/756150_c033_4.jpg"
+      },
+      {
+        "id": "3",
+        "title": "Desarrollo Ágil con Scrum y Git",
+        "description": "Aprende a integrar metodologías ágiles con herramientas de versionado.",
+        "image": "https://img.freepik.com/vector-gratis/ilustracion-concepto-metodo-scrum_114360-13019.jpg"
+      },
+      {
+        "id": "4",
+        "title": "Colaboración en Equipos de Desarrollo",
+        "description": "Estrategias para una colaboración efectiva utilizando Git y GitHub.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK6CdzdXQeSb6B4nTdDFUyFK7vC9q4a9g5oAk6dOpscJab9Iq_4ibWZJP-uLRHiYdY9pk&usqp=CAU"
+      }
+    ],
+    "date": "2024-07-01",
+    "popularity": 8,
+    "category": "Desarrollo"
+}
+,
+  {
+    "id": "2",
+    "title": "Desarrollo Ágil con Scrum y Git",
+    "image": "https://media.licdn.com/dms/image/sync/D4D27AQEa78x6YbTwhw/articleshare-shrink_800/0/1712155394380?e=2147483647&v=beta&t=seZuYyQwb8RHVO0PdYM08n0UqzXzuzVOEHeypdCgfOw",
+    "sections": [
+      {
+        "title": "Introducción",
+        "content": "Este curso se centra en la metodología ágil y su integración con herramientas de control de versiones como Git."
+      },
+      {
+        "title": "Contenido del Curso",
+        "content": "Aprenderás sobre Scrum, sprints, y cómo gestionar proyectos de manera efectiva."
+      },
+      {
+        "title": "Cierre",
+        "content": "Se ofrecerán ejemplos prácticos de implementación de Scrum en proyectos de software."
+      }
+    ],
+    "relatedCourses": [
+      {
+        "id": "1",
+        "title": "Curso Intensivo de Git y GitHub",
+        "description": "Curso para aprender los fundamentos de Git y GitHub.",
+        "image": "https://via.placeholder.com/200x100"
+      },
+      {
+        "id": "3",
+        "title": "Colaboración en Equipos de Desarrollo",
+        "description": "Estrategias para una colaboración efectiva utilizando Git y GitHub.",
+        "image": "https://via.placeholder.com/200x100"
+      }
+    ],
+    "date": "2023-08-01",
+    "popularity": 9,
+    "category": "Metodologías Ágiles"
+  },
+  {
+    "id": "3",
+    "title": "Colaboración en Equipos de Desarrollo",
+    "image": "https://image.slidesharecdn.com/wsoeg7n2qhaw2w6ey2nj-signature-af14b15233db106d69af9e7b35aa1fcf254d509b8d654cc7700f025138bab5f6-poli-150612203119-lva1-app6892/85/Git-with-Scrum-en-espanol-1-320.jpg",
+    "sections": [
+      {
+        "title": "Introducción",
+        "content": "La colaboración efectiva en equipos es esencial para el éxito en proyectos de software."
+      },
+      {
+        "title": "Herramientas de Colaboración",
+        "content": "Exploraremos las mejores prácticas y herramientas para facilitar la colaboración."
+      },
+      {
+        "title": "Cierre",
+        "content": "Discutiremos casos de estudio de colaboración exitosa en proyectos de desarrollo."
+      }
+    ],
+    "relatedCourses": [
+      {
+        "id": "1",
+        "title": "Curso Intensivo de Git y GitHub",
+        "description": "Curso para aprender los fundamentos de Git y GitHub.",
+        "image": "https://via.placeholder.com/200x100"
+      },
+      {
+        "id": "2",
+        "title": "Desarrollo Ágil con Scrum y Git",
+        "description": "Aprende a integrar metodologías ágiles con herramientas de versionado.",
+        "image": "https://api.ajackus.com/wp-content/uploads/2021/12/Agile-%E2%80%93-A-buzzword-in-the-corporate-world.png"
+      }
+    ],
+    "date": "2023-08-15",
+    "popularity": 7,
+    "category": "Colaboración"
+  },
+  {
+    "id": "4",
+    "title": "Integración Continua con Git y Jenkins",
+    "image": "https://img.youtube.com/vi/ShJ6-xhPQhM/maxresdefault.jpg",
+    "sections": [
+      {
+        "title": "Introducción",
+        "content": "Aprende sobre la integración continua y cómo usar Jenkins para automatizar tus proyectos."
+      },
+      {
+        "title": "Contenido del Curso",
+        "content": "Configuración de Jenkins, pipelines y mejores prácticas para la integración continua."
+      }
+    ],
+    "relatedCourses": [],
+    "date": "2023-09-01",
+    "popularity": 6,
+    "category": "DevOps"
+  }
+]

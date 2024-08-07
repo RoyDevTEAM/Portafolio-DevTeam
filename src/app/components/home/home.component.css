@@ -25,13 +25,13 @@
   background-position: center;
   height: 100%; /* Ensure the height fits the container */
   width: 100%;  /* Ensure the width fits the container */
-  opacity: 0;
+  opacity: 0.8; /* Reduce opacity for a softer background */
   transform: translateX(100%);
   animation: slide-in 1s forwards 0.5s;
   position: relative; /* Ensure proper alignment */
 }
 
-/* Ensure the image fits within the container */
+/* Overlay para mejorar la legibilidad */
 .cover-section::before {
   content: "";
   position: absolute;
@@ -39,8 +39,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-  z-index: 0; /* Ensure overlay is below text */
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0; 
 }
 
 @keyframes slide-in {
@@ -122,9 +122,7 @@ p {
     background-position: center;
   }
 
-  .cover-section::before {
-    background: rgba(0, 0, 0, 0.7); /* Increase contrast for mobile */
-  }
+  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -174,6 +172,7 @@ p {
 .card img {
   margin-bottom: 1rem;
   border-radius: 0.75rem;
+
 }
 
 .card h3 {
@@ -211,88 +210,79 @@ p {
 .btn.bg-gray-800:hover {
   background-color: #1a202c;
 }
+/* home.component.css */
+.courses-section {
+  padding: 2rem;
+  background-color: #1a202c;
+}
 
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Mostrar 3 cards por fila */
+  gap: 1.5rem;
+}
 
-  .courses-section {
-    background-color: #1a202c; /* Fondo del header */
-    padding: 2rem 1rem;
-  }
-  
+.course-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.course-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 1rem;
+}
+
+.course-content h3 {
+  margin-bottom: 0.5rem;
+  color: #2d3748; /* Texto más oscuro */
+}
+
+.course-content p {
+  margin-bottom: 1rem;
+  color: #4a5568; /* Texto más claro */
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #3b82f6;
+  border-radius: 0.375rem;
+  transition: background-color 0.3s;
+  text-align: center; /* Centrar el texto */
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .courses-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); /* Mostrar 2 cards por fila en pantallas medianas */
   }
-  
-  .course-card {
-    background-color: #2d3748; /* bg-gray-800 */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .courses-container {
+    grid-template-columns: 1fr; /* Mostrar 1 card por fila en pantallas pequeñas */
   }
-  
-  .course-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  .course-content {
-    padding: 1.5rem;
-    flex: 1;
-  }
-  
-  .course-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .course-content h3 {
-    color: #fff; /* White text */
-  }
-  
-  .course-content p {
-    color: #cbd5e0; /* text-gray-300 */
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: #38b2ac; /* Teal color */
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #319795; /* Darker teal for hover */
-    transform: scale(1.05);
-  }
-  
-  @media (max-width: 768px) {
-    .courses-container {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .courses-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 1025px) {
-    .courses-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
+}
+
+
   .events-webinars-section {
     background-color: #edf2f7; /* bg-gray-200 */
     padding: 2rem;
@@ -386,7 +376,7 @@ p {
   
   .services-section {
     background-color: #1a202c; /* Fondo del header */
-    padding: 45px 0 15px 0;
+    padding: 45px 0 15px 100px;
   }
   
   .services-section .section-header p {

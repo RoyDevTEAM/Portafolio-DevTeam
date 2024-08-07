@@ -1,0 +1,30 @@
+/* Aumenta el tamaño de las imágenes en el aside */
+aside img {
+  width: 96px; /* 24 * 4 = 96px */
+  height: 96px;
+  object-fit: cover;
+}
+
+/* Añade efecto hover para el enlace */
+aside a:hover {
+  color: #1c3faa; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Añade efecto hover para el contenedor del curso relacionado */
+aside .flex:hover {
+  background-color: #e5e7eb; /* Cambia el fondo al pasar el mouse */
+  transition: background-color 0.2s ease-in-out; /* Suaviza la transición */
+}
+
+/* Justificar texto en dispositivos móviles */
+@media (max-width: 768px) {
+  article p,
+  article section {
+      text-align: justify;
+  }
+}
+
+/* Asegurar que el texto en el aside también esté justificado */
+aside p {
+  text-align: justify;
+}

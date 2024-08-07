@@ -13,6 +13,9 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CursoGitComponent } from './components/cursos/curso-git/curso-git.component';
+import { CursosContentComponent } from './components/cursos-content/cursos-content.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NoticiasContentComponent } from './components/noticias-content/noticias-content.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,16 @@ import { CursoGitComponent } from './components/cursos/curso-git/curso-git.compo
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    CursoGitComponent
+    CursoGitComponent,
+    CursosContentComponent,
+    NoticiasContentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,  // Agregar FormsModule aquí
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule // Asegúrate de importar HttpClientModule
+
   ],
   providers: [
     provideClientHydration()
