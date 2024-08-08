@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
   projects = [
-    { filter: 'filter-1', title: 'Sistema de ventas', image: 'assets/img/proyect/img1.PNG' },
-    { filter: 'filter-1', title: 'Tienda Online', image: 'assets/img/proyect/img2.PNG' },
-    { filter: 'filter-1', title: 'Reserva de hotel', image: 'assets/img/proyect/img3.jpeg' },
-    { filter: 'filter-2', title: 'Sistema de gestion escolar', image: 'https://edteam-media.s3.amazonaws.com/blogs/original/08810a24-07c9-4fa9-97f0-83ac3690f774.png' },
-    { filter: 'filter-2', title: 'Company Website', image: 'https://edteam-media.s3.amazonaws.com/blogs/original/08810a24-07c9-4fa9-97f0-83ac3690f774.png' },
-    { filter: 'filter-3', title: 'JavaScript Game', image: 'assets/img/proyect/game1.PNG' },
+    { filter: 'filter-1', title: 'Sistema de ventas', image: 'assets/img/proyect/img1.PNG', githubLink: 'https://github.com/tu-repo/sistema-de-ventas' },
+    { filter: 'filter-1', title: 'Tienda Online', image: 'assets/img/proyect/img2.PNG', githubLink: 'https://github.com/tu-repo/tienda-online' },
+    { filter: 'filter-1', title: 'Reserva de hotel', image: 'assets/img/proyect/img3.jpeg', githubLink: 'https://github.com/tu-repo/reserva-de-hotel' },
+    { filter: 'filter-2', title: 'Sistema de gestion escolar', image: 'https://edteam-media.s3.amazonaws.com/blogs/original/08810a24-07c9-4fa9-97f0-83ac3690f774.png', githubLink: 'https://github.com/tu-repo/sistema-de-gestion-escolar' },
+    { filter: 'filter-2', title: 'Company Website', image: 'https://edteam-media.s3.amazonaws.com/blogs/original/08810a24-07c9-4fa9-97f0-83ac3690f774.png', githubLink: 'https://github.com/tu-repo/company-website' },
+    { filter: 'filter-3', title: 'JavaScript Game', image: 'assets/img/proyect/game1.PNG', githubLink: 'https://github.com/tu-repo/javascript-game' },
     // Add more projects as needed
   ];
 
