@@ -1,0 +1,31 @@
+digraph G {
+    // Estilos generales
+    graph [bgcolor=lightgray];
+    node [shape=record, style=filled, fontname="Helvetica"];
+    edge [color=black, penwidth=2, fontname="Helvetica"];
+
+    // Definición de tablas con sus columnas
+    Usuario [label="{Usuario|+ UsuarioID: INT (PK)\l+ Nombre: VARCHAR(100)\l+ Apellido: VARCHAR(100)\l+ Email: VARCHAR(100)\l+ Telefono: VARCHAR(20)\l+ Direccion: VARCHAR(255)\l}" fillcolor=lightblue, fontcolor=black];
+    Rol [label="{Rol|+ RolID: INT (PK)\l+ Nombre: VARCHAR(50)\l+ Descripcion: VARCHAR(255)\l}" fillcolor=lightgreen, fontcolor=black];
+    Permiso [label="{Permiso|+ PermisoID: INT (PK)\l+ Nombre: VARCHAR(50)\l+ Descripcion: VARCHAR(255)\l}" fillcolor=lightyellow, fontcolor=black];
+    RolPermiso [label="{RolPermiso|+ RolPermisoID: INT (PK)\l+ RolID: INT (FK)\l+ PermisoID: INT (FK)\l}" fillcolor=orange, fontcolor=black];
+    UsuarioRol [label="{UsuarioRol|+ UsuarioRolID: INT (PK)\l+ UsuarioID: INT (FK)\l+ RolID: INT (FK)\l}" fillcolor=pink, fontcolor=black];
+    Evento [label="{Evento|+ EventoID: INT (PK)\l+ Nombre: VARCHAR(100)\l+ Descripcion: VARCHAR(255)\l+ Precio: DECIMAL(10,2)\l}" fillcolor=lightcoral, fontcolor=black];
+    Calendario [label="{Calendario|+ CalendarioID: INT (PK)\l+ Fecha: DATE\l+ Hora: TIME\l+ EventoID: INT (FK)\l+ Estado: VARCHAR(50)\l}" fillcolor=lightcyan, fontcolor=black];
+    Reserva [label="{Reserva|+ ReservaID: INT (PK)\l+ ClienteID: INT (FK)\l+ EventoID: INT (FK)\l+ DecoracionID: INT\l+ Fecha: DATE\l+ Hora: TIME\l+ NumeroAsistentes: INT\l+ Estado: VARCHAR(50)\l+ ComentarioEmpleado: VARCHAR(255)\l+ FechaReserva: DATETIME\l}" fillcolor=lavender, fontcolor=black];
+    Notificacion [label="{Notificacion|+ NotificacionID: INT (PK)\l+ ReservaID: INT (FK)\l+ ClienteID: INT (FK)\l+ Mensaje: VARCHAR(255)\l+ FechaEnvio: DATETIME\l+ TipoNotificacion: VARCHAR(50)\l}" fillcolor=khaki, fontcolor=black];
+
+    // Definición de relaciones con diferentes estilos de líneas y colores
+    Usuario -> UsuarioRol [label="1..*" color=blue, fontcolor=black];
+    Rol -> UsuarioRol [label="1..*" color=green, fontcolor=black];
+    Rol -> RolPermiso [label="1..*" color=green, fontcolor=black];
+    Permiso -> RolPermiso [label="1..*" color=orange, fontcolor=black];
+    Evento -> Calendario [label="1..*" color=red, fontcolor=black];
+    Usuario -> Reserva [label="1..*" color=purple, fontcolor=black];
+    Evento -> Reserva [label="1..*" color=purple, fontcolor=black];
+    Reserva -> Notificacion [label="1..*" color=brown, fontcolor=black];
+    Usuario -> Notificacion [label="1..*" color=brown, fontcolor=black];
+
+    // Estilo de bordes y flechas
+    edge [arrowhead=vee];
+}

@@ -16,7 +16,7 @@ export class CoursesComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 6; // Cambia esto según tus necesidades
   totalPages: number = 0;
-  categories: string[] = ['tecnología', 'Devops', 'backend', 'investigación', 'móvil', 'prototipos', 'Desarrollo', 'bases de datos']; // Categorías actualizadas
+  categories: string[] = ['tecnología', 'Devops', 'Automatización', 'investigación', 'móvil', 'Diseño', 'Desarrollo', 'bases de datos']; // Categorías actualizadas
   accordionOpen: boolean = false; // Estado del acordeón
   pageNumbers: number[] = []; // Para la paginación
 
